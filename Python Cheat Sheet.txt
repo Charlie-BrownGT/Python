@@ -1,0 +1,142 @@
+# Python Cheat Sheet
+
+# Comments: Use the '#' symbol for single-line comments
+
+# Variables and Data Types
+x = 10                  # Integer
+y = 3.14                # Float
+name = "John"           # String
+is_student = True       # Boolean
+
+# Basic Input and Output
+print("Hello, World!")
+user_input = input("Enter your name: ")
+print("You entered:", user_input)
+
+# Arithmetic Operators
+a = 10
+b = 3
+sum_result = a + b
+diff_result = a - b
+product_result = a * b
+division_result = a / b
+modulus_result = a % b
+exponentiation_result = a ** b
+
+# Comparison Operators
+x = 5
+y = 10
+is_equal = x == y
+is_not_equal = x != y
+is_greater = x > y
+is_less = x < y
+is_greater_equal = x >= y
+is_less_equal = x <= y
+
+# Conditional Statements
+if condition:
+    # code to execute if the condition is True
+elif another_condition:
+    # code to execute if the above condition is False and this condition is True
+else:
+    # code to execute if both conditions are False
+
+# Loops
+for item in iterable:
+    # code to execute for each item in the iterable
+
+while condition:
+    # code to execute as long as the condition is True
+
+# Lists (Mutable)
+my_list = [1, 2, 3, 4, 5]
+list_length = len(my_list)
+list_element = my_list[2]
+my_list.append(6)
+my_list.pop(1)
+
+# Tuples (Immutable)
+my_tuple = (1, 2, 3)
+
+# Dictionaries (Key-Value Pairs)
+my_dict = {'name': 'John', 'age': 30}
+value = my_dict['name']
+my_dict['occupation'] = 'Engineer'
+del my_dict['age']
+
+# Sets (Unordered, No Duplicate Elements)
+my_set = {1, 2, 3}
+my_set.add(4)
+my_set.remove(3)
+
+# Functions
+def greet(name):
+    return "Hello, " + name + "!"
+
+result = greet("Alice")
+
+# File Handling
+with open("file.txt", "r") as file:
+    content = file.read()
+
+# Exception Handling
+try:
+    # code that might raise an exception
+except SomeException as e:
+    # code to handle the exception
+
+# Modules and Packages
+import module_name
+from module_name import function_name
+
+# Classes and Objects
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def say_hello(self):
+        return "Hello, my name is " + self.name
+
+person = Person("John", 30)
+greeting = person.say_hello()
+
+# Virtual Environments (venv)
+# Create a virtual environment: python -m venv myenv
+# Activate the virtual environment:
+#   - Windows: myenv\Scripts\activate
+#   - macOS/Linux: source myenv/bin/activate
+# Deactivate the virtual environment: deactivate
+
+# Regular Expressions (regex)
+import re
+pattern = r'\d+' # Matches one or more digits
+result = re.findall(pattern, "I have 123 apples.")
+
+# Lambda Functions
+add = lambda x, y: x + y
+result = add(2, 3)
+
+# List Comprehension
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = [x ** 2 for x in numbers]
+
+# Built-in Functions
+len(iterable)          # Returns the number of elements in the iterable
+range(start, end, step)    # Returns a sequence of numbers from start to end (exclusive) with a step
+type(obj)              # Returns the type of the object
+int(x)                 # Converts x to an integer
+float(x)               # Converts x to a float
+str(x)                 # Converts x to a string
+max(iterable)          # Returns the largest element in the iterable
+min(iterable)          # Returns the smallest element in the iterable
+sum(iterable)          # Returns the sum of all elements in the iterable
+
+# Useful Modules
+import math
+import random
+import datetime
+import os
+
+# Note: Import the modules using 'import' statements before using the corresponding functions/classes.
+

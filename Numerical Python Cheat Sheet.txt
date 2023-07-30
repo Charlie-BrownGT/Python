@@ -1,0 +1,106 @@
+# Python Cheat Sheet for Numerical Calculations
+
+# Import necessary libraries
+import numpy as np
+import scipy as sp
+import pandas as pd
+
+# Basic arithmetic operations
+# Addition
+result = 2 + 3
+
+# Subtraction
+result = 5 - 2
+
+# Multiplication
+result = 2 * 4
+
+# Division
+result = 10 / 2
+
+# Exponentiation
+result = 2 ** 3  # 2 raised to the power of 3
+
+# Square root
+result = np.sqrt(25)
+
+# Trigonometric functions (in radians)
+angle = np.pi / 6  # 30 degrees in radians
+sin_val = np.sin(angle)
+cos_val = np.cos(angle)
+tan_val = np.tan(angle)
+
+# Logarithmic functions
+log_val = np.log(10)  # Natural logarithm (base e)
+log10_val = np.log10(100)  # Logarithm base 10
+
+# Common constants
+pi_value = np.pi
+euler_value = np.e
+
+# Arrays and Matrices (using NumPy)
+# Creating arrays
+arr = np.array([1, 2, 3, 4, 5])
+
+# Matrix operations
+matrix1 = np.array([[1, 2], [3, 4]])
+matrix2 = np.array([[5, 6], [7, 8]])
+
+# Matrix addition
+result = matrix1 + matrix2
+
+# Matrix multiplication
+result = np.dot(matrix1, matrix2)
+
+# Element-wise operations
+result = matrix1 * matrix2
+
+# Statistics and data analysis (using pandas)
+data = pd.Series([1, 2, 3, 4, 5])
+mean_val = data.mean()
+median_val = data.median()
+std_dev = data.std()
+correlation = data.corr()
+
+# Integration (using SciPy)
+from scipy.integrate import quad
+
+def integrand(x):
+    return x**2
+
+result, error = quad(integrand, 0, 1)  # Integrating x^2 from 0 to 1
+
+# Optimization (using SciPy)
+from scipy.optimize import minimize
+
+def objective(x):
+    return x**2 + 3*x + 4
+
+initial_guess = 0  # Initial guess for the minimum
+result = minimize(objective, initial_guess)
+
+# Solving equations (using SciPy)
+from scipy.optimize import fsolve
+
+def equation(x):
+    return x**2 - 4
+
+result = fsolve(equation, 0)  # Solving x^2 - 4 = 0
+
+# Random number generation (using NumPy)
+random_number = np.random.rand()  # Uniform distribution between 0 and 1
+random_int = np.random.randint(1, 10)  # Random integer between 1 and 9
+
+# Linear algebra (using NumPy)
+matrix = np.array([[1, 2], [3, 4]])
+inverse_matrix = np.linalg.inv(matrix)
+determinant = np.linalg.det(matrix)
+
+# Interpolation (using SciPy)
+from scipy.interpolate import interp1d
+
+x = [1, 2, 3, 4, 5]
+y = [10, 5, 2, 8, 3]
+interpolation_function = interp1d(x, y, kind='linear')
+interpolated_value = interpolation_function(2.5)
+
