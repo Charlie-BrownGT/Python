@@ -1,5 +1,12 @@
 #importing the time module
 import time
+import random
+
+# List of predefined words
+word_list = ["apple", "banana", "cherry", "grape", "orange", "pear", "strawberry"]
+
+def generate_random_word():
+    return random.choice(word_list)
 
 #welcoming the user
 name = input("What is your name? ")
@@ -13,7 +20,7 @@ print ("Start guessing...")
 time.sleep(0.5)
 
 #here we set the secret. You can select any word to play with. 
-word = ("secret")
+word = generate_random_word()
 
 #creates an variable with an empty value
 guesses = ''
